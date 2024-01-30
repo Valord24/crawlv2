@@ -18,7 +18,7 @@ feature.
 @tab e The map environment.
 ]]
 function ice_cave_portal(e)
-    local timeout_turns = crawl.random_range(600, 800)
+    local timeout_turns = crawl.random_range(2000, 3000)
 
     local messager = timed_msg {
         initmsg = { "You feel a wave of frost pass over you.",
@@ -52,7 +52,7 @@ function ice_cave_portal(e)
           feat_tile = gone,
           msg = messager })
     e.tags("uniq_icecv chance_icecave")
-    e.chance(500)
+    e.chance(10000)
 
     e.kfeat("O = enter_ice_cave")
     if dgn.persist.ice_cave_hard then
