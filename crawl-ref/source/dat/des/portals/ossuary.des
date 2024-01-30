@@ -13,7 +13,7 @@
 
 {{
 function ossuary_portal(e)
-  local timeout_turns = crawl.random_range(600, 800)
+  local timeout_turns = crawl.random_range(2000, 3000)
 
   local messager =
     timed_msg {
@@ -42,8 +42,8 @@ function ossuary_portal(e)
         feat_tile = "dngn_portal_ossuary_gone",
         msg = messager })
   e.tags("uniq_ossuary no_monster_gen chance_ossuary")
-  e.depth_chance("D:4-5", 500)
-  e.depth_chance("D:6-7", 550)
+  e.depth_chance("D:4-5", 10000)
+  e.depth_chance("D:6-7", 10000)
   e.kfeat("O = enter_ossuary")
   e.colour("' = yellow")
   e.ftile("' = floor_sandstone")
