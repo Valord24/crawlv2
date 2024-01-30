@@ -11,7 +11,7 @@
 
 {{
 function bailey_portal(e, ptype)
-  local timeout_turns = crawl.random_range(600, 800)
+  local timeout_turns = crawl.random_range(2000, 3000)
 
   local messager =
     timed_msg {
@@ -42,7 +42,7 @@ function bailey_portal(e, ptype)
         feat_tile = "dngn_portal_bailey_gone",
         msg = messager })
   e.tags("uniq_bailey chance_bailey")
-  e.chance(1000)
+  e.chance(10000)
 
   e.kfeat("O = enter_bailey")
   e.tile("c = wall_stone_smooth")
